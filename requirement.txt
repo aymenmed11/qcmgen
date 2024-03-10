@@ -7,6 +7,6 @@ huggingface_hub
 transformers
 accelerate
 bitsandbytes
-
+langchain_openai
 
 -e .
