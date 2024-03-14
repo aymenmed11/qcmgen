@@ -4,7 +4,7 @@ import PyPDF2
 import traceback
 
 def read_file(file):
-    if file.name.endswit(".pdf"):
+    if file.name.endswith(".pdf"):
         try:
             pdf_reader=PyPDF2.PdfFileReader(file)
             text=""
@@ -31,7 +31,7 @@ def get_table_data(quiz_str):
 
         # iterate over the quiz dictionary and extract the required information 
         for key,value in quiz_dict.items():
-            qcm=value["qcm"]
+            qcm = value["mcq"]
             options=" || ".join(
                 [
                     f"{option}->{option_value}" for option, option_value in value["options"].items()
